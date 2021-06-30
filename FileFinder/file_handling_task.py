@@ -1,4 +1,5 @@
 class FileFind:
+
     def file_find(self, name):
         try:
              file = open(name)
@@ -7,3 +8,4 @@ class FileFind:
              print(f"File not found {errmsg}")
         finally:
              print("Thank you for visiting!")
+

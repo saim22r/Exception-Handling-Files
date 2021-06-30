@@ -54,4 +54,22 @@ class FileFind:
              print("Thank you for visiting!")
 ```
 - Step 2: Create __init__.py in the directory
-- Step 3: Create 
+- Step 3: Create setup.py
+```
+from setuptools import setup
+
+setup(name="Find File")
+version = "1.00"
+description = "File app"
+author = "Saim at Sparta"
+author_email = "saim22r@gmail.com"
+url = "http//:spartagloba.com"
+```
+- Step 4: Create program.py 
+```
+from FileFinder.file_handling_task import FileFind
+
+file = FileFind()
+file_name = input("What file would you like to open? ")
+print(file.file_find(file_name))
+```
