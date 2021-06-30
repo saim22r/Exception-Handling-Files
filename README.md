@@ -23,3 +23,35 @@
 - `try` works as `if condition`
 - `except` works as `elif`
 - `finally` works as else, finally will execute regardless of `try` and `except` conditions
+
+#### Dealing with files
+- First iteration
+```
+ file = open("order.text") # open() takes a string arg with file name
+ print(file) # Let's see the outcome and record it. File not found error will appear.
+```
+- Second iteration
+```
+try:
+     file = open("order.text")
+     print("File found") # Try block required except or will throw an error
+ except FileNotFoundError as errmsg: # Creating alias same as a nickname
+     print(f"File not found {errmsg}")
+ finally: # Finally will execute regardless of try and except block execution, also used to clean up the code
+     print("Thank you for visiting, see you again!")
+```
+#### Task - Create a function, Apply OOP and Create a package
+- Step 1: Create a directory `FileFinder` and place the code for the task in there `file_handling_task.py`
+```
+class FileFind:
+    def file_find(self, name):
+        try:
+             file = open(name)
+             print("File found")
+        except FileNotFoundError as errmsg:
+             print(f"File not found {errmsg}")
+        finally:
+             print("Thank you for visiting!")
+```
+- Step 2: Create __init__.py in the directory
+- Step 3: Create 
